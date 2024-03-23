@@ -22,11 +22,6 @@ const Body = () => {
   function getRestaurants() {
     const restaurant_data = RESTAURANT_DATA;
 
-    console.log(
-      restaurant_data?.data?.success?.cards[4].gridWidget?.gridElements
-        ?.infoWithStyle?.restaurants
-    );
-
     setFilteredRestaurants(
       restaurant_data?.data?.success?.cards[4].gridWidget?.gridElements
         ?.infoWithStyle?.restaurants
@@ -109,12 +104,9 @@ const Body = () => {
           <h1 className="font-bold text-3xl text-center">Restaurant List</h1>
         </div>
         <div className="flex flex-wrap">
-          {filteredRestaurants.map((restaurant) => {
+          {filteredRestaurants.map((restaurant, index) => {
             return (
-              <Link
-                to={"/restaurant/" + restaurant.info.id}
-                key={restaurant.info.id}
-              >
+              <Link to={"/restaurant/" + index} key={restaurant.info.id}>
                 <RestaurantCard {...restaurant.info} />
               </Link>
             );
