@@ -59,12 +59,12 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="p-5 mt-4 bg-pink-50 text-center">
+      <div className="p-5 pt-32 text-center">
         <input
           data-testid="search-input"
           type="text"
-          className="p-2 m-2 rounded-md focus:bg-green-200 focus:text-white"
-          placeholder="Search"
+          className="p-2 m-2 w-72 rounded-md border border-gray-700 focus:bg-green-200 focus:text-white "
+          placeholder="Search a restaurant you want..."
           value={searchInput}
           onChange={(e) => {
             setSearchInput(e.target.value);

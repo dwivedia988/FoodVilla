@@ -18,7 +18,7 @@ const RestaurantMenu = () => {
   return !restaurant ? (
     <Shimmer />
   ) : (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto pt-32">
       <div className="flex justify-between mt-8">
         <div className="pt-4">
           {/* <h1>Restaurant Id : {resid}</h1> */}

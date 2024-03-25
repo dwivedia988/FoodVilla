@@ -12,8 +12,11 @@ const Cart = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto">
-      <h1 className="font-bold text-3xl p-3"> Cart Items - {cartItems.length}</h1>
+    <div className="max-w-7xl mx-auto pt-32">
+      <h1 className="font-bold text-3xl p-3">
+        {" "}
+        Cart Items - {cartItems.length}
+      </h1>
       <button
         className="bg-green-100 p-2 m-5 rounded-lg"
         onClick={() => handleClearCart()}
